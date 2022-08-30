@@ -1,13 +1,147 @@
+/* Cancel default styles */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  display: block;
+  cursor: pointer;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* App */
+.app {
+  display: flex;
+  margin: 70px auto 0px;
+  width: max-content;
+}
+
+/* Names */
+
+.names {
+  width: 300px;
+  margin-bottom: 40px;
+
+  border: 2px solid #000;
+}
+
+.names li {
+  border-bottom: 1px solid #000;
+}
+
+.names li:last-child {
+  border-bottom: 0;
+}
+
+.names p {
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.names .active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.names .disabled {
+  cursor: initial;
+}
+
+.names p:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+
+  border-left: 8px solid transparent;
+}
+
+.names p.active::after {
+  border-left-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Button */
+
+.button {
+  width: 150px;
+  margin: 0 auto;
+  padding: 6px 0px;
+
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background-color linear 250ms;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Certificate */
+
+.certificate {
+  width: 400px;
+  height: 300px;
+  margin-left: 40px;
+  padding: 3px;
+
+  border: 2px solid #000;
+}
+
+.certificate.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.56);
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Drop area */
+
+.drop-area {
+  width: 400px;
+  height: 300px;
+  margin-left: 40px;
+  padding: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+
+  color: rgba(0, 0, 0, 0.585);
+  border: 2px dashed #000;
 }
