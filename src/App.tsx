@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import NamesTable from 'components/NamesTable/NamesTable';
-import Button from 'components/Button/Button';
-import Certificate from 'components/Certificate/Certificate';
-import Upload from 'components/Upload/Upload';
-import parseCertificate from 'calc/parseCertificate';
+import NamesTable from './components/NamesTable/NamesTable';
+import Button from './components/Button/Button';
+import Certificate from './components/Certificate/Certificate';
+import Upload from './components/Upload/Upload';
+import parseCertificate from './calc/parseCertificate';
 import { toast } from 'react-toastify';
-import { ICertificate } from 'types';
+import { ICertificate } from './types';
 
 const LS_KEY = 'certificates';
 
